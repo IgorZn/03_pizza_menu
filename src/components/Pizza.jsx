@@ -1,9 +1,18 @@
 import React from 'react';
 
+/*
+name
+ingredients
+price
+photoName
+soldOut
+* */
+
 function Pizza(props) {
+    const { pizza } = props
     return (
-        <div>
-            <h2>First Pizza</h2>
+        <div key={pizza.id}>
+            <h2>{pizza.name}</h2>
         </div>
     );
 }

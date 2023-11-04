@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/03-pizza-menu.iml" filepath="$PROJECT_DIR$/.idea/03-pizza-menu.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ecom2/.idea/ecom2.iml" filepath="$PROJECT_DIR$/../ecom2/.idea/ecom2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ecommerce/.idea/ecommerce.iml" filepath="$PROJECT_DIR$/../ecommerce/.idea/ecommerce.iml" />
       <module fileurl="file://$PROJECT_DIR$/../first-app_get-advice/.idea/first-app_get-advice.iml" filepath="$PROJECT_DIR$/../first-app_get-advice/.idea/first-app_get-advice.iml" />
     </modules>
   </component>
