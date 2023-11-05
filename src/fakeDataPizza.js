@@ -1,14 +1,22 @@
 import { faker } from '@faker-js/faker';
-import * as fs from 'node:fs/promises';
+// import * as fs from 'node:fs/promises';
+// const fs = require('fs')
 
 
-
-const getFakePizzas = async (num = 10) => {
+const getFakePizzas = (num = 10) => {
     const pizzaData = []
-    const pictures = await fs.readdir('../public/pizzas').catch(err => console.log(err))
+    const pictures = [
+        'focaccia.jpg',
+        'funghi.jpg',
+        'margherita.jpg',
+        'prosciutto.jpg',
+        'salamino.jpg',
+        'spinaci.jpg'
+    ]
+
     for (let i = 0; i < num; i++) {
         pizzaData.push({
-            id: faker.string.hexadecimal({ length: 15 }),
+            id: faker.string.hexadecimal({length: 15}),
             name: `Pizza ${faker.lorem.word()}`,
             ingredients: faker.lorem.sentence(3),
             price: Math.floor(Math.random() * faker.number.int({min: 10, max: 100})),

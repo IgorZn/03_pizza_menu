@@ -1,4 +1,5 @@
 import React from 'react';
+import {Card, ListGroup, Button} from "react-bootstrap";
 
 /*
 name
@@ -9,11 +10,25 @@ soldOut
 * */
 
 function Pizza(props) {
-    const { pizza } = props
+    const {pizza} = props
     return (
-        <div key={pizza.id}>
-            <h2>{pizza.name}</h2>
-        </div>
+        <>
+            <ListGroup>
+                <ListGroup.Item>
+                    <Card style={{width: '18rem'}}>
+                        <Card.Img variant="top" src={pizza.photoName} rounded={"true"} />
+                        <Card.Body>
+                            <Card.Title><h3>{pizza.name}</h3></Card.Title>
+                            <Card.Text>
+                                {pizza.ingredients}
+                            </Card.Text>
+                            <span>{pizza.price}</span>
+                        </Card.Body>
+                    </Card>
+                </ListGroup.Item>
+            </ListGroup>
+
+        </>
     );
 }
 

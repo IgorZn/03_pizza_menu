@@ -1,16 +1,25 @@
 import React from 'react';
 import Pizza from "./Pizza";
 import getFakePizzas from "../fakeDataPizza";
+import {Col, Row} from "react-bootstrap";
 
 const pizzas = getFakePizzas()
+console.log(pizzas)
 
 function Menu(props) {
     return (
-        <div>
-            <h1>Menu</h1>
-            {pizzas.map((pizza) => (
-                <Pizza pizza={pizza}/>
-            ))}
+        <div className={"menu"}>
+            <h2>Our Menu</h2>
+            <Row className={"pizzas"}>
+                {pizzas.map((pizza) => (
+                    <div key={pizza.id} className={"pizza"}>
+                        <Col>
+                            <Pizza pizza={pizza}/>
+                        </Col>
+                    </div>
+                ))}
+            </Row>
+
 
         </div>
     );
