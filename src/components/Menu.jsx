@@ -10,7 +10,8 @@ function Menu(props) {
     return (
         <div className={"menu"}>
             <h2>Our Menu</h2>
-            <Row className={"pizzas"}>
+            {pizzas && (
+                <Row className={"pizzas"}>
                 {pizzas.map((pizza) => (
                     <div key={pizza.id} className={"pizza"}>
                         <Col>
@@ -19,8 +20,7 @@ function Menu(props) {
                     </div>
                 ))}
             </Row>
-
-
+            )}
         </div>
     );
 }
